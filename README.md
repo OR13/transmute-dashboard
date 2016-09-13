@@ -2,8 +2,6 @@
 
 ```
 $ npm install && bower install && tsd install
-$ gulp serve
-$ gulp build
-$ gulp gh-deploy
+$ npm run clean-serve
 ```
 

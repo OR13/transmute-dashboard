@@ -1,10 +1,6 @@
 {
   "name": "transmute-bot",
   "version": "0.0.0",
-  "dependencies": {
-    "blaze_compiler": "0.0.36",
-    "firebase": "^2.4.2"
-  },
   "scripts": {
     "clean-serve": "clear && gulp clean && gulp serve",
     "test": "gulp test"

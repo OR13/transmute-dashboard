@@ -19,7 +19,7 @@ function ghDeploy () {
 
     .pipe( debug() )
     .pipe( gghp({
-      remoteUrl: 'https://github.com/transmute-industries/transmute.industries.git',
+      remoteUrl: 'https://github.com/transmute-industries/transmute-dashboard.git',
       branch:  'gh-pages',
       message: "v" + pack.version
     })  );
