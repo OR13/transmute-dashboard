@@ -1,0 +1,28 @@
+.busybots-malarkey {
+  // text-transform: capitalize;
+  color: $md-primary;
+  font-size: 2em;
+  margin-bottom: 32px;
+  
+  &:after {
+    animation: cursor-blink 0.4s linear infinite;
+    content: "|";
+    color: $md-accent;
+    
+  }
+}
+
+@keyframes cursor-blink {
+  1% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,82 @@
+
+.version-number{
+  padding: 16px;
+  color: #fff;
+}
+body.main {
+  // ##### categories ####
+  // buildings
+  // food
+  // nature
+  // people
+  // technology
+  // objects
+
+  app-navbar {
+    md-toolbar {
+    background: transparent !important;
+    }
+   
+  }
+ 
+  background-color: $md-background;
+  background-image: url("https://source.unsplash.com/category/technology/1280x1024");
+  background-size: cover;
+  background-blend-mode: soft-light;
+
+  // rendered-particles{
+  //   background-color: $md-background;
+  // }
+
+  .conversation-container{
+    // margin-top: 128px;
+  }
+  
+  .view-source{
+      padding: 16px;
+      color: #fff;
+      text-decoration: none;
+  }
+
+}
+
+  md-icon.app-logo {
+    svg {
+      path {
+        fill: $md-accent;
+      }
+    }
+}
+
+.s256 {
+  width: 256px;
+  height: 256px;
+}
+
+.s64 {
+  width: 64px;
+  height: 64px;
+}
+
+.s128 {
+  width: 128px;
+  height: 128px;
+}
+
+.greeting{
+    margin-top: 15%;
+}
+
+.conversation-loading{
+     margin-top: 35%;
+}
+
+.user-avatar{
+  width: 128px !important;
+  height: 128px !important;
+}
+
+.message-editor{
+  padding-bottom: 16px;
+}
+

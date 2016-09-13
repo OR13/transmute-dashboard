@@ -1,0 +1,11 @@
+.app-conversation-message{
+    margin-bottom: 32px;
+    // padding: 32px;
+    // color: $user-color;
+    // word-wrap: break-word;
+}
+
+.app-conversation-message.proto{
+    color: $bot-color;
+    // text-align: right; 
+}

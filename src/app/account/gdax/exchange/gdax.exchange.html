@@ -1,0 +1,78 @@
+<section ng-show="gdaxExchangeCtrl.isLoading" layout-padding layout="column" layout-align="center center">
+
+    <md-progress-circular md-mode='indeterminate' class="md-hue-2" md-diameter="64px"></md-progress-circular>
+    <h3> Loading... </h3>
+
+</section>
+
+<style>
+
+    body {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    path {
+        fill: none;
+        stroke-width: 1;
+    }
+
+    path.ohlc {
+        stroke: #000000;
+        stroke-width: 1;
+    }
+
+    path.ohlc.up {
+        stroke: #00AA00;
+    }
+
+    path.ohlc.down {
+        stroke: #FF0000;
+    }
+
+    .ma-0 path.line {
+        stroke: #1f77b4;
+    }
+
+    .ma-1 path.line {
+        stroke: #aec7e8;
+    }
+
+    path.volume {
+        fill: #EEEEEE;
+    }
+
+    .crosshair {
+        cursor: crosshair;
+    }
+
+    .crosshair path.wire {
+        stroke: #DDDDDD;
+        stroke-dasharray: 1, 1;
+    }
+
+    .crosshair .axisannotation path {
+        fill: #DDDDDD;
+    }
+
+</style>
+
+<section ng-hide="gdaxExchangeCtrl.isLoading"  layout="column">
+
+<div flex layout-padding>
+      <canvas id="line" class="chart chart-line" chart-data="gdaxExchangeCtrl.chart.data" chart-labels="gdaxExchangeCtrl.chart.labels"
+            chart-series="gdaxExchangeCtrl.chart.series" chart-options="gdaxExchangeCtrl.chart.options" chart-dataset-override="gdaxExchangeCtrl.chart.datasetOverride"
+            chart-click="onClick"> </canvas>
+</div>
+
+<div flex class="exchange-feed"></div>
+
+<!--https://github.com/andredumas/techan.js/wiki/Gallery-->
+
+</section>

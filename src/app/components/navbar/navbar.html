@@ -1,0 +1,70 @@
+<md-toolbar class="app-navbar">
+    <section layout="row" layout-align="center center" ng-cloak>
+
+        <div flex layout-padding>
+            <span class="brandName">
+                <a ui-sref="main" class="main-brand-link">
+                    <md-icon class="brandLogo s64" md-svg-src="assets/svg/logo.svg" aria-label="Transmute Industries Logo"></md-icon> Transmute Industries
+                </a>
+            </span>
+        </div>
+
+        <md-menu ng-if="vm.$rootScope.App.UserService.user" class="user-account-menu">
+            <md-button aria-label="Open demo menu" ng-click="$mdOpenMenu($event)">
+                <md-icon md-menu-origin class="material-icons">person</md-icon>
+                {{vm.$rootScope.App.UserService.user.displayName}}
+            </md-button>
+            <md-menu-content width="6">
+                <md-menu-item>
+                    <md-button ui-sref="account">
+                        <md-icon md-menu-align-target class="material-icons">face</md-icon> Account
+                    </md-button>
+                </md-menu-item>
+
+                 <md-menu-item>
+                    <md-button ui-sref="exchange">
+                        <md-icon md-menu-align-target class="material-icons">toys</md-icon> Exchange
+                    </md-button>
+                </md-menu-item>
+
+       
+                <md-menu-item>
+                    <md-button ng-click="vm.toggleSidenav()">
+                        <md-icon md-menu-align-target class="material-icons">chat</md-icon> Web Chat
+                    </md-button>
+                </md-menu-item>
+
+                <md-menu-item>
+                    <md-button href="https://github.com/transmute-industries/transmute.industries">
+                        <md-icon md-menu-align-target class="material-icons">code</md-icon> View Source
+                    </md-button>
+                </md-menu-item>
+
+                <md-menu-item>
+                    <md-button ui-sref="logout">
+                        <md-icon md-menu-align-target class="material-icons">exit_to_app</md-icon> Logout
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+
+
+        <div ng-if="!vm.$rootScope.App.UserService.user">
+            <!--
+            <md-button class="" target="_blank" href="http://github.com/transmute-industries/transmute.industries">
+                <i class="fa fa-code"></i> View Source
+            </md-button>-->
+
+            <!--<md-button class="md-raised md-primary" hide-sm ng-click="vm.toggleSidenav()" ui-sref="main" aria-label="demo toggle">
+                <i class="fa fa-fire"></i> Demo
+            </md-button>-->
+
+
+            <md-button ui-sref="login" class="md-raised">
+                <i class="fa fa-sign-in"></i> Login
+            </md-button>
+        </div>
+
+    </section>
+</md-toolbar>

@@ -1,0 +1,5 @@
+typings
+bower_components
+node_modules
+.tmp
+.publish

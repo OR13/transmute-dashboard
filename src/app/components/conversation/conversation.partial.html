@@ -1,0 +1,5 @@
+<md-list>
+    <md-list-item style="padding: 0px;" ng-repeat="msg in conversationCtrl.ConversationService.conversation.messages" layout-fill ng-if="msg.text != 'wake'">
+        <app-conversation-message message="msg" layout-fill layout-padding></app-conversation-message>
+    </md-list-item>
+</md-list>

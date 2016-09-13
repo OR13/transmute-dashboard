@@ -1,0 +1,30 @@
+<md-content layout="column" layout-fill>
+
+    <app-navbar layout="column"></app-navbar>
+
+    <div class='login-content' layout="column" flex id="login-content" role="main">
+        <div layout="vertical" flex id="login-content">
+            <div layout="row" layout-align="center center" layout-fill>
+                <md-whiteframe class="md-accent " layout="column" flex="60" layout-padding>
+
+                    <!--<md-input-container>
+                        <label>Email</label>
+                        <input ng-model="loginController.UserService.login.email">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Password</label>
+                        <input ng-model="loginController.UserService.login.password" type="password">
+                    </md-input-container>-->
+                    <md-input-container layout-align="center center">
+                        <div layout="row" layout-sm="column" layout-margin>
+                            <md-button class="md-primary md-raised md-hue-3" flex="33" flex-sm="100" ng-click="loginController.signInWithGithub()">Login</md-button>
+                            <!--<md-button class="md-primary" flex="33" flex-sm="100">Register</md-button>
+                            <md-button class="md-raised md-accent" flex="33" flex-sm="100" ng-click="loginController.loginUserForDemo()">Login</md-button>-->
+                        </div>
+                    </md-input-container>
+
+                </md-whiteframe>
+            </div>
+        </div>
+    </div>
+</md-content>

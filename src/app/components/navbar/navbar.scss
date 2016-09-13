@@ -1,0 +1,37 @@
+
+
+$logoColor: #fff;
+
+
+// .user-account-menu {
+//   .md-icon-button{
+//   width: 512px;
+//   }
+// }
+
+.brandName {
+  white-space: nowrap;
+
+  }
+
+
+.main-brand-link{
+  text-decoration: none;
+  color: $logoColor;
+
+
+  .brandLogo{
+    margin-top: 8px;
+    margin-right: 8px;
+  }
+  
+  md-icon {
+    svg {
+      path {
+        fill: $logoColor;
+      }
+    }
+}
+
+}
+

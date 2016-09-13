@@ -1,0 +1,135 @@
+
+
+<md-content>
+
+    <div layout="column" layout-fill flex layout-padding>
+        <div flex="10"></div>
+        <div flex="80" layout="column" layout-fill layout-padding>
+
+            <section ng-show="botframeworkConfigCtrl.AccountService.isLoading" layout-padding layout="column" layout-align="center center"
+                style="margin-top: 16px;">
+
+                <md-progress-circular md-mode='indeterminate' class="md-hue-2" md-diameter="64px"></md-progress-circular>
+                <h3> Loading... </h3>
+
+            </section>
+
+            <section ng-hide="botframeworkConfigCtrl.AccountService.isLoading" layout-padding style="margin-top: 16px;">
+
+                <div ng-hide="botframeworkConfigCtrl.AccountService.hasAccountSecret" layout-padding layout="column" layout-align="center center">
+
+                    <p class="md-title">Create an Account Secret.</p>
+
+                    <div layout="column">
+
+                        <md-input-container>
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="botframeworkConfigCtrl.AccountService.accountSecret" type="text" placeholder="Account Secret" ng-required="true">
+                        </md-input-container>
+
+                        <md-input-container>
+                            <md-button class="md-raised md-primary" ng-click="botframeworkConfigCtrl.saveAccountSecret()" ng-disabled="!botframeworkConfigCtrl.accountSecret">Save</md-button>
+                        </md-input-container>
+
+                    </div>
+
+                </div>
+
+                <div ng-show="botframeworkConfigCtrl.AccountService.hasAccountSecret" layout="row" layout-align="left center">
+
+                    <div flex layout-padding>
+
+            
+                        <h3 layout="row">
+                            <span flex>Bot Framework</span>
+                            <md-button ng-click="App.AccountService.saveAccount()" class="md-raised md-primary">Save</md-button>
+                        </h3>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>Bot Name</label>
+                            <md-icon class="material-icons">face</md-icon>
+                            <input ng-model="App.AccountService.Local.Bot.Name" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>Bot Endpoint</label>
+                            <md-icon class="material-icons">http</md-icon>
+                            <input ng-model="App.AccountService.Local.Bot.Endpoint" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="App.AccountService.Local.Bot.DirectLineSecret" type="text" placeholder="Direct Line Secret " ng-required="true">
+                        </md-input-container>
+
+
+
+                    </div>
+
+                    <!--<div flex layout-padding>
+                        <h3> Coinbase Connect</h3>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>Client Id</label>
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="App.AccountService.SecureBox.Local.Coinbase.ClientId" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>Client Secret</label>
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="App.AccountService.SecureBox.Local.Coinbase.ClientSecret" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-icon class="material-icons">http</md-icon>
+                            <input ng-model="botframeworkConfigCtrl.SecureBox.Local.Coinbase.RedirectURIs" type="text" placeholder="Redirect URIs "
+                                ng-required="true" ng-disabled="true">
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-icon class="material-icons">http</md-icon>
+                            <input ng-model="botframeworkConfigCtrl.SecureBox.Local.Coinbase.NotificationURL" type="text" placeholder="Notification URL "
+                                ng-required="true" ng-disabled="true">
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="botframeworkConfigCtrl.SecureBox.Local.Coinbase.ScopeRestrictions" type="text" placeholder="Scope Restrictions "
+                                ng-required="true" ng-disabled="true">
+                        </md-input-container>
+
+                    </div>-->
+
+                    <!--<div flex layout-padding>
+                        <h3>GDAX</h3>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>API Key</label>
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="App.AccountService.SecureBox.Local.GDAX.Key" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-icon-float md-block">
+                            <label>Passphrase</label>
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="App.AccountService.SecureBox.Local.GDAX.Passphrase" type="text">
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-icon class="material-icons">lock</md-icon>
+                            <input ng-model="botframeworkConfigCtrl.SecureBox.Local.GDAX.Secret" type="text" placeholder="API Secret " ng-required="true"
+                                ng-disabled="true">
+                        </md-input-container>
+                    </div>-->
+
+
+                </div>
+
+            </section>
+        </div>
+        <div flex="10"></div>
+    </div>
+
+</md-content>
+

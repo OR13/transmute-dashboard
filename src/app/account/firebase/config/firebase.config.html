@@ -1,0 +1,71 @@
+<section ng-show="firebaseConfigCtrl.FirebaseService.isLoading" layout-padding layout="column" layout-align="left center">
+
+    <md-progress-circular md-mode='indeterminate' class="md-hue-2" md-diameter="64px"></md-progress-circular>
+    <h3> Loading... </h3>
+
+</section>
+
+<section layout-padding>
+
+    <div flex layout-padding>
+
+        <h3 layout="row">
+            <span flex>Local Storage Secrets</span>
+            <md-button ng-click="firebaseConfigCtrl.toggleShowPlainText()" class="md-raised md-primary">Toggle Security</md-button>
+
+
+            <md-button ng-hide="firebaseConfigCtrl.AccountService.accountSecret" ng-click="firebaseConfigCtrl.saveAccountSecret()" class="md-raised md-primary">Save</md-button>
+            <md-button ng-show="firebaseConfigCtrl.AccountService.accountSecret" ng-click="firebaseConfigCtrl.AccountService.deleteAccountAndSecret()"
+                class="md-raised md-primary">Delete</md-button>
+        </h3>
+
+        <md-input-container layout-fill>
+            <md-icon class="material-icons">lock</md-icon>
+
+            <input ng-model="firebaseConfigCtrl.accountSecret" type="password" placeholder="Account Secret" ng-disabled="firebaseConfigCtrl.AccountService.accountSecret">
+
+        </md-input-container>
+
+        <p class="md-title">
+            Anyone with an XSS on this site or access to your machine can read these.
+        </p>
+
+    </div>
+
+</section>
+
+<section style="margin-top: 16px;" layout-padding>
+
+    <div flex layout-padding>
+
+        <h3 layout="row">
+            <span flex>Firebase Configuration</span>
+        </h3>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>API Key</label>
+            <md-icon class="material-icons">http</md-icon>
+            <input ng-model="firebaseConfigCtrl.firebaseConfig.apiKey" type="text" ng-disabled="true">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Auth Domain</label>
+            <md-icon class="material-icons">http</md-icon>
+            <input ng-model="firebaseConfigCtrl.firebaseConfig.authDomain" type="text" ng-disabled="true">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Database URL</label>
+            <md-icon class="material-icons">http</md-icon>
+            <input ng-model="firebaseConfigCtrl.firebaseConfig.databaseURL" type="text" ng-disabled="true">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Storage Bucket</label>
+            <md-icon class="material-icons">http</md-icon>
+            <input ng-model="firebaseConfigCtrl.firebaseConfig.storageBucket" type="text" ng-disabled="true">
+        </md-input-container>
+
+    </div>
+
+</section>

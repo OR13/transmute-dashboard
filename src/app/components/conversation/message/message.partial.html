@@ -1,0 +1,9 @@
+<md-whiteframe class="md-whiteframe-32dp app-message {{messageCtrl.message.from}}" layout="column">
+
+    <h3 ng-bind="messageCtrl.displayAccountName(messageCtrl.message.from)"></h3>
+
+    <div>
+        <p ng-bind="messageCtrl.message.text"></p>
+    </div>
+
+</md-whiteframe>

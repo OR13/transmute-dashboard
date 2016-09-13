@@ -1,0 +1,37 @@
+<section ng-show="gdaxConfigCtrl.isLoading" layout-padding layout="column" layout-align="center center">
+
+    <md-progress-circular md-mode='indeterminate' class="md-hue-2" md-diameter="64px"></md-progress-circular>
+    <h3> Loading... </h3>
+
+</section>
+
+<section ng-hide="gdaxConfigCtrl.isLoading" layout-padding>
+
+    <div flex layout-padding>
+
+        <h3 layout="row">
+            <span flex>GDAX</span>
+            <md-button ng-click="gdaxConfigCtrl.saveConfig()" class="md-raised md-primary">Save</md-button>
+        </h3>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Username</label>
+            <md-icon class="material-icons">email</md-icon>
+            <input ng-model="gdaxConfigCtrl.awConfig.Username" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Sid</label>
+            <md-icon class="material-icons">lock</md-icon>
+            <input ng-model="gdaxConfigCtrl.awConfig.Sid" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Secret</label>
+            <md-icon class="material-icons">lock</md-icon>
+            <input ng-model="gdaxConfigCtrl.awConfig.Secret" type="text">
+        </md-input-container>
+
+    </div>
+
+</section>
